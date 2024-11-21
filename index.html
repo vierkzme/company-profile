@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ardy Nugroho - Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      header {
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+    </style>
+  </head>
+  <body class="font-roboto">
+    <!-- HEADER -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 bg-transparent">
+      <nav class="container mx-auto flex justify-between items-center p-4">
+        <!-- Logo -->
+        <h1 class="text-2xl font-bold text-white">Ardy Nugroho Profile</h1>
+
+        <!-- Hamburger Menu -->
+        <button
+          id="menuToggle"
+          class="lg:hidden text-white text-3xl focus:outline-none"
+        >
+          ☰
+        </button>
+
+        <!-- Navigation Links -->
+        <ul id="navLinks" class="hidden lg:flex space-x-6">
+          <li>
+            <a href="#home" class="text-white hover:text-gray-300">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="text-white hover:text-gray-300">About Us</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="text-white hover:text-gray-300"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#blog" class="text-white hover:text-gray-300">Blog</a>
+          </li>
+          <li>
+            <a href="#contact" class="text-white hover:text-gray-300"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Dropdown Menu for Mobile -->
+      <div id="mobileMenu" class="hidden lg:hidden bg-black text-white">
+        <ul class="flex flex-col space-y-4 p-4">
+          <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+          <li><a href="#about" class="hover:text-gray-300">About Us</a></li>
+          <li>
+            <a href="#portfolio" class="hover:text-gray-300">Portfolio</a>
+          </li>
+          <li><a href="#blog" class="hover:text-gray-300">Blog</a></li>
+          <li><a href="#contact" class="hover:text-gray-300">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section
+      id="home"
+      class="h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
+      style="
+        background-image: url('https://plus.unsplash.com/premium_photo-1673984261110-d1d931e062c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      "
+    >
+      <h2 class="text-5xl font-bold text-white mb-4 drop-shadow-lg">
+        Welcome to Ardy Nugroho Profile
+      </h2>
+      <p class="text-xl text-white mb-8 drop-shadow-md">
+        Your trusted partner for all IT solutions
+      </p>
+      <button
+        id="orderNowBtn"
+        class="px-8 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-800 transition-all"
+      >
+        Order Now
+      </button>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 bg-white text-center">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <p class="max-w-2xl mx-auto text-gray-600">
+        We are a trusted service provider specializing in web development,
+        design, and IT consulting. Our team is committed to delivering
+        excellence in every project.
+      </p>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+          Our Portfolio
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Portfolio Items -->
+          <div class="relative group cursor-pointer">
+            <img
+              src="https://cdn.dribbble.com/userupload/17669819/file/original-66b0ca34e36670df5d7ce31e6a601bec.png?resize=1200x900&vertical=center"
+              alt="Project 1"
+              class="rounded-lg shadow-lg w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
+            >
+              <button
+                class="text-white text-lg font-bold"
+                onclick="openModal('https://cdn.dribbble.com/userupload/17669819/file/original-66b0ca34e36670df5d7ce31e6a601bec.png?resize=1200x900&vertical=center', 'Web Design for Finance')"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <img
+              src="https://cdn.dribbble.com/userupload/17656321/file/original-db43ecd68806437aa0ef78fe4ab5bc85.png?resize=1200x900&vertical=center"
+              alt="Project 2"
+              class="rounded-lg shadow-lg w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
+            >
+              <button
+                class="text-white text-lg font-bold"
+                onclick="openModal('https://cdn.dribbble.com/userupload/17656321/file/original-db43ecd68806437aa0ef78fe4ab5bc85.png?resize=1200x900&vertical=center', 'Web Design For Fintech')"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <img
+              src="https://cdn.dribbble.com/userupload/17648647/file/original-132f22c5abd820558e847a049c8a0acf.png?resize=1200x900&vertical=center"
+              alt="Project 3"
+              class="rounded-lg shadow-lg w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
+            >
+              <button
+                class="text-white text-lg font-bold"
+                onclick="openModal('https://cdn.dribbble.com/userupload/17648647/file/original-132f22c5abd820558e847a049c8a0acf.png?resize=1200x900&vertical=center', 'Real Estate Property Finder Website Design')"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+          Our Blog
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Blog Posts -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Blog Post 1"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                How to Create Stunning Websites
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Learn the secrets to creating websites that attract users and
+                clients.
+              </p>
+              <button
+                class="text-blue-600 font-bold hover:underline"
+                onclick="openModal('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'How to Create Stunning Websites')"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Blog Post 2"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                The Importance of SEO in 2024
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Understand why SEO remains a key factor for online success in
+                2024.
+              </p>
+              <button
+                class="text-blue-600 font-bold hover:underline"
+                onclick="openModal('https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'The Importance of SEO in 2024')"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Blog Post 3"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                5 Tips for Designing User-Friendly Apps
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Explore the key principles for creating apps that users love.
+              </p>
+              <button
+                class="text-blue-600 font-bold hover:underline"
+                onclick="openModal('https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', '5 Tips for Designing User-Friendly Apps')"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Todos -->
+    <section id="todos" class="py-20 bg-gray-100 text-center">
+      <h2 class="text-3xl font-bold mb-6">My Todos</h2>
+      <div class="container mx-auto max-w-md">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Add a new todo..."
+          class="border border-gray-300 p-2 w-full mb-4 rounded"
+        />
+        <button
+          id="addTodoBtn"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800"
+        >
+          Add Todo
+        </button>
+        <ul id="todoList" class="mt-6"></ul>
+      </div>
+    </section>
+
+    <!-- MODAL PHOTO -->
+    <div
+      id="imageModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+    >
+      <div class="relative bg-white rounded-lg shadow-lg p-6 max-w-2xl w-full">
+        <button
+          class="absolute top-3 right-3 text-gray-700 hover:text-gray-900"
+          onclick="closeModal()"
+        >
+          ✕
+        </button>
+        <img id="modalImage" src="" alt="" class="rounded-lg mb-4 w-full" />
+        <h3 id="modalTitle" class="text-xl font-bold text-gray-800"></h3>
+      </div>
+    </div>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-20 bg-white text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <p class="text-gray-600">
+        Feel free to reach out to us via email at info@ardyiv99.com or call us
+        at +62 123 456 789.
+      </p>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6 text-center">
+      <p>© 2024 My Profile. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      id="orderModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full">
+        <h2 class="text-3xl font-bold text-center mb-6">Choose Your Plan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Basic Plan -->
+          <div class="border rounded-lg p-6 text-center bg-gray-100">
+            <h3 class="text-2xl font-bold text-blue-600 mb-4">Basic Plan</h3>
+            <p class="text-lg font-semibold text-gray-700 mb-4">$500</p>
+            <ul class="text-gray-600 space-y-2 mb-6">
+              <li>✔ Responsive Website</li>
+              <li>✔ Up to 5 Pages</li>
+              <li>✔ Basic SEO</li>
+              <li>✔ Email Support</li>
+            </ul>
+            <button
+              class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800 transition-all"
+            >
+              Choose Basic
+            </button>
+          </div>
+          <!-- Premium Plan -->
+          <div class="border rounded-lg p-6 text-center bg-gray-100">
+            <h3 class="text-2xl font-bold text-red-600 mb-4">Premium Plan</h3>
+            <p class="text-lg font-semibold text-gray-700 mb-4">$1000</p>
+            <ul class="text-gray-600 space-y-2 mb-6">
+              <li>✔ Responsive Website</li>
+              <li>✔ Unlimited Pages</li>
+              <li>✔ Advanced SEO</li>
+              <li>✔ Custom Design</li>
+              <li>✔ 24/7 Priority Support</li>
+            </ul>
+            <button
+              class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-800 transition-all"
+            >
+              Choose Premium
+            </button>
+          </div>
+        </div>
+        <button
+          id="closeModalBtn"
+          class="mt-6 px-6 py-2 text-black rounded-lg block mx-auto"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
